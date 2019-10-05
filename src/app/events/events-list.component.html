@@ -2,8 +2,11 @@
   <h1>Upcomming Events</h1>
   <hr />
   <div class="row">
-    <div *ngFor="let e of events" class="col-md-5">
-      <event-thumbnail [event]="e"></event-thumbnail>
+    <div *ngFor="let s of events" class="col-md-5">
+      <event-thumbnail
+        (click)="handleClick(s.name)"
+        [event]="s"
+      ></event-thumbnail>
     </div>
   </div>
 </div>
