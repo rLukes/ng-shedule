@@ -5,6 +5,9 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   templateUrl: "event.thumbnail.component.html",
   styles: [
     `
+      .thumbnail {
+        min-height: 210px;
+      }
       .pad-left {
         margin-left: 10px;
       }

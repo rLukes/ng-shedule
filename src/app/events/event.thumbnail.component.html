@@ -1,12 +1,17 @@
-<div class="well hoverwll thumbnail">
-  <h2>{{ event.name }}</h2>
-  <div>Date: {{ event.date }}</div>
-  <div>Time: {{ event.time }}</div>
-  <div>Price: {{ event.price }}</div>
-  <div>
-    <span>Location: {{ event.location.adress }}</span>
+<div class="well hoverwell thumbnail">
+  <h2>{{ event?.name }}</h2>
+  <div>Date: {{ event?.date }}</div>
+  <div>Time: {{ event?.time }}</div>
+  <div>Price: {{ event?.price }}</div>
+  <div [ngSwitch]="event?.time">
+    <span *ngSwitchCase="'08:00'">Early start</span>
+    <span *ngSwitchCase="'10:00'">Normal start</span>
+    <span *ngSwitchDefault>Late start</span>
+  </div>
+  <div *ngIf="event?.location">
+    <span>Location: {{ event?.location?.adress }}</span>
     <span class="pad-left"
-      >{{ event.location.city }}, {{ event.location.country }}</span
+      >{{ event?.location?.city }}, {{ event?.location?.country }}</span
     >
   </div>
 </div>
