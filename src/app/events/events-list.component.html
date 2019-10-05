@@ -1,5 +1,6 @@
 <div>
   <h1>Upcomming Events</h1>
   <hr />
-  <event-thumbnail [event]="events"></event-thumbnail>
+  <event-thumbnail [event]="e" *ngFor="let e of events"></event-thumbnail>
+  <button class="bt btn-primary"></button>
 </div>

@@ -5,17 +5,36 @@ import { Component } from "@angular/core";
   templateUrl: "./events-list.component.html"
 })
 export class EventsListComponent {
-  events = {
-    id: 1,
-    name: "Java",
-    date: "20.09.2019",
-    time: "10:00",
-    price: "5600",
-    imageUrl: "assets/images/java.png",
-    location: {
-      adress: "10511 DT",
-      city: "NY",
-      country: "England"
+  events = [
+    {
+      id: 1,
+      name: "Java",
+      date: "20.09.2019",
+      time: "10:00",
+      price: "5600",
+      imageUrl: "assets/images/java.png",
+      location: {
+        adress: "10511 DT",
+        city: "NY",
+        country: "England"
+      }
+    },
+    {
+      id: 1,
+      name: "Java",
+      date: "20.09.2019",
+      time: "10:00",
+      price: "5600",
+      imageUrl: "assets/images/java.png",
+      location: {
+        adress: "10511 DT",
+        city: "NY",
+        country: "England"
+      }
     }
-  };
+  ];
+
+  handleClick(data) {
+    console.log(data);
+  }
 }
