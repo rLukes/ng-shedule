@@ -1,38 +1,17 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { DataService } from "./shared/data.service";
 
 @Component({
   selector: "event-list",
   templateUrl: "./events-list.component.html"
 })
-export class EventsListComponent {
-  events = [
-    {
-      id: 1,
-      name: "Java",
-      date: "20.09.2019",
-      time: "10:00",
-      price: "5600",
-      imageUrl: "assets/images/java.png",
-      location: {
-        adress: "10511 DT",
-        city: "NY",
-        country: "England"
-      }
-    },
-    {
-      id: 1,
-      name: "Angular",
-      date: "10.06.2020",
-      time: "11:00",
-      price: "8600",
-      imageUrl: "assets/images/java.png",
-      location: {
-        adress: "IU1 DT",
-        city: "Paris",
-        country: "France"
-      }
-    }
-  ];
+export class EventsListComponent implements OnInit {
+  events: any;
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.events = this.dataService.getEvents();
+  }
 
   handleClick(data) {
     console.log(data);
