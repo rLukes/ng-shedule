@@ -10,6 +10,7 @@ import { ToastService } from "./common/toastr.service";
 import { EventDetailsComponent } from "./events/event-details/event-details.component";
 import { RouterModule } from "@angular/router";
 import { appRoutes } from "./routes";
+import { CreateEvent } from "./events/crete-event.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { appRoutes } from "./routes";
     EventsListComponent,
     EventThumbnailComponent,
     NavbarComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    CreateEvent
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [DataService, ToastService],

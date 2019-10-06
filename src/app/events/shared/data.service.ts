@@ -26,7 +26,7 @@ const EVENTS = [
     }
   },
   {
-    id: 1,
+    id: 2,
     name: "Angular",
     date: "10.06.2020",
     time: "11:00",
